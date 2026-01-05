@@ -1,0 +1,34 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#2dd4bf;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,#071123 0%, #071827 100%);
+  color:#e6eef6;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:980px;margin:28px auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.title{font-size:1.6rem;margin:0}
+.controls{display:flex;gap:8px;align-items:center}
+input[type=number]{width:78px;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:var(--glass);color:var(--muted)}
+button{background:var(--accent);border:none;padding:8px 12px;border-radius:8px;color:#042027;font-weight:600;cursor:pointer}
+button:active{transform:translateY(1px)}
+.list{margin-top:18px;display:flex;flex-direction:column;gap:12px}
+.game{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:12px;border:1px solid rgba(255,255,255,0.03);display:flex;flex-direction:column}
+.meta{display:flex;justify-content:space-between;align-items:center;font-size:0.9rem;color:var(--muted);margin-bottom:6px}
+.match{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.team{display:flex;flex:1;align-items:center;gap:12px}
+.team .name{font-weight:600}
+.score{font-size:1.1rem;font-weight:700;min-width:44px;text-align:center}
+.status-badge{background:rgba(255,255,255,0.04);padding:6px 8px;border-radius:999px;color:var(--muted);font-size:0.85rem}
+.empty{color:var(--muted);padding:18px;text-align:center}
+@media (max-width:600px){.match{flex-direction:column;align-items:flex-start}.score{min-width:unset}}
